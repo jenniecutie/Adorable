@@ -20,12 +20,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '*q#yw90rgk!2bk02k905rajvi4_nq=kql@tajrcj+y8eq5^%cf'
-
+#SECRET_KEY = '*q#yw90rgk!2bk02k905rajvi4_nq=kql@tajrcj+y8eq5^%cf'
+SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['sweetbites.ph']
+ALLOWED_HOSTS = ['sweetbites.pythonanywhere.com']
 
 # Application definition
 
@@ -75,8 +75,11 @@ WSGI_APPLICATION = 'webdevSB.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'Sweetbites$default',
+        'USER': 'Sweetbites',
+        'PASSWORD': 'jenniedatabase',
+        'HOST': 'Sweetbites.mysql.pythonanywhere-services.com',
     }
 }
 
