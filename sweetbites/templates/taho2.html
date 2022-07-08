@@ -1,0 +1,29 @@
+{%extends 'nave.html'%}
+{%block content%}
+{%load static%}
+      <div class="middle">
+        <div class="background_review">
+          <img src="{% static 'img/Taho.webp' %}"
+             alt="Taho"
+             class="imageformat"/>
+          <p class="description" style="font-size: 17px;">
+            <b class="product_name">Taho</b>
+            <br>
+            <br> 
+            <a href="{% url 'tahoo/' %}" class="link"> <em> Description/ </em> </a>
+            <a href="{% url 'taho1/' %}" class="link"> <em> Ingredients/ </em> </a>
+            <br>
+            <br> 1. In a saucepan with a tight-fitting lid, pour 6 cups of water and bring it to a boil over medium-high heat. Once boiling, pour the uncooked Tapioca and stir to keep the pearls separate. Switch heat to med-low , cover and simmer for 30 minutes.
+            <br>
+            <br> 2. Turn the heat off and let the mixture cool to room temperature. Once cool, taste one to make sure it’s cooked all the way through.
+            <br>
+            <br> 3. In a separate pan, combine brown sugar and water and bring to a boil on medium heat.
+            <br>
+            <br> 4. To assemble Taho, remove the dessert tofu from its original packaging and transfer to a microwaveable bowl and microwave for 1 minute or until warm and heated through. 
+            <br>
+            <br> 5. Add some cooked Tapioca and top with a few spoonfuls of the sweet sugar syrup.
+          </p>
+        </div>  
+      </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{%extends 'nave.html'%}
+{%block content%}
+{%load static%}
+      <div class="middle">
+        <div class="background_review">
+          <img src="{% static 'img/Bananacue.webp' %}"
+             alt="Bananacue"
+             class="imageformat"/>
+
+        <p class="description">
+            <b class="product_name">Banana Cue</b>
+          <br>
+          <br>Prep: 5 mins<br>
+              Cook: 10 mins<br>
+              Total: &15 mins<br>
+              Servings: 3<br>
+          <br> 
+            <a href="{% url 'bananacuee1/' %}" class="link"> <em> Ingredients/ </em> </a>
+            <a href="{% url 'bananacuee2/' %}" class="link"> <em> Direction to cook </em> </a>
+          <br>
+            
+          <br>Description:<br>
+          <br>
+              The term "banana cue" refers to fried skewered fruit cooked with brown sugar. This is a Filipino delicacy that is typically eaten as a mid-afternoon snack.
+
+              Banana Cue is one of the most popular street foods in the Philippines, and it can readily be found on the streets of Manila and other parts of the country.
+        </p>
+        </div>  
+      </div>
+    </div>
+{%endblock%} 

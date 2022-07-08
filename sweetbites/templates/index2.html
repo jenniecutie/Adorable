@@ -1,0 +1,74 @@
+{%extends 'nave.html'%}
+{%block content%}
+{%load static%}
+      <div class="middle">
+        <div class="background_review">
+          <img 
+             src="{% static 'img/Recipe_Image.png' %}"
+             alt="Recipe_Image"
+             class="imageformat"/>
+
+          <p class="description">
+            <b class="product_name">Share Your Recipe!</b>
+            <br>
+            <br> Welcome to the biggest recipe swap around! Use this form to share a recipe with Sweetbites. Our editors want to share your recipes and your special family traditions, stories and photos. Your recipe will also have a chance to be published in our website. So share you recipe now! We love to see what you’re cooking and baking!
+           <br>
+            <form name="myForm" id="suggest" method="POST">
+            {% csrf_token %}
+               <fieldset style="border-color: #DF4F80; border-width: 3px; height: 420px;">
+                  <div id="reviewForm">
+                    <div class="review_form">
+                      Dessert Information
+                    </div>
+                  <label>Name: </label>
+                    <input type="text"
+                           id="dessertName"
+                           Name="dessertName"
+                           class="inputformat4" 
+                           placeholder="Enter the name of your dessert"
+                           required/>
+                    <br>
+                    <label>Description: </label>
+                    <input type="text"
+                           id="description"
+                           Name="description"
+                           class="inputformat5" 
+                           placeholder="What do you love about this recipe? " 
+                           required/>
+                    <br>
+                    <label>Prep. Time: </label>
+                    <input id="prepTime"
+                           type="text"
+                           class="inputformat6" 
+                           placeholder="How long did you prepare to cook?"
+                           Name="prepTime"
+                           required/>
+                    <br>
+                    <label>Cook Time: </label>
+                    <input id="cookTime"
+                          type="text"
+                          class="inputformat7" 
+                           placeholder="How long did you cook?"
+                           Name="cookTime"
+                           required/>
+                    <br>
+                    <label>Yield Serving: </label>       
+                    <input id="yieldServing"
+                           type="number" 
+                           class="inputformat8" 
+                           placeholder="Enter the number of serving"
+                           Name="yieldServing"
+                           required/>
+                    <button
+                      class="paymentForm10" 
+                      name="submit"
+                      type="submit"/> Submit
+                    
+                </button>
+                   </div>
+               </fieldset> 
+            </form>
+          </p>
+        </div>
+      </div>
+{%endblock%} 

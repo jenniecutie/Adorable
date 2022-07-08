@@ -1,0 +1,41 @@
+{%extends 'nave.html'%}
+{%block content%}
+{%load static%}
+<script>
+      function mult(value) {
+        var x, y, a, b, c, d;
+        x= (parseFloat(500 / 6) * value).toFixed(2);
+        y= (parseFloat(0.5 / 6) * value).toFixed(2);
+        a= 1* value;
+        b= (parseFloat(1 / 6) * value).toFixed(2);
+
+
+        document.getElementById('outputX').value = x;
+        document.getElementById('outputY').value = y;
+        document.getElementById('outputA').value = a;
+        document.getElementById('outputB').value = b;
+      }
+    </script>
+      <div class="middle">
+        <div class="background_review">
+          <img src="{% static 'img/Taho.webp' %}"
+             alt="Taho"
+             class="imageformat"/>
+
+          <p class="description">
+            <b class="product_name">Taho</b>
+            <label for="servings" class="serving_form"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; Yield Serving: </label>
+            <input type="number" name="Input" onkeyup="mult(this.value);" onclick="mult(this.value);" class="serving_design" value="6" min="1">
+            <br> <br>
+            <a href="{% url 'tahoo/' %}" class="link"><em> Description/ </em></a>
+            <a href="{% url 'taho2/' %}" class="link"><em> Direction to cook/ </em></a>
+            <br>
+            <br><br> <input type="text" name="Output" id="outputX" class="serving_design" value="500" readonly> ml soy milk
+            <br><br> <input type="text" name="Output" id="outputY" class="serving_design" value="0.5"  readonly> cup small tapioca 
+            <br><br> <input type="text" name="Output" id="outputA" class="serving_design" value="6" readonly> cups water
+            <br><br> <input type="text" name="Output" id="outputB" class="serving_design" value="1" readonly> cup dark brown sugar
+          </p>
+        </div> 
+      </div>
+    </div>
+{% endblock %}

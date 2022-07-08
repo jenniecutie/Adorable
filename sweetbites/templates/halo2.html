@@ -1,0 +1,33 @@
+{%extends 'nave.html'%}
+{%block content%}
+{%load static%}
+      <div class="middle">
+        <div class="background_review">
+          <img src="{% static 'img/Halo-halo1.webp' %}"
+             alt="Halo-halo"
+             class="imageformat"/>
+
+          <p class="description" style="font-size:19px;">
+            <b class="product_name">Halo-halo</b>
+            <br>
+            <br> 
+            <a href="{% url 'halohaloo/' %}" class="link"> <em>Description/</em> </a>
+            <a href="Halo1.html" class="link"> <em> Ingredients/ </em> </a>
+            <br>
+            <br>
+            <br> 1. Peel mangoes and slice into half-inch cubes.
+            <br>
+            <br> 2. Divide each ingredient into 4 equal parts. Place each ingredients layer by layer.
+            <br>
+            <br> 3. Put the one-half cup of shaved ice to each glass.
+            <br>
+            <br> 4. Pour a quarter of milk evap over shaved ice to each glass.
+            <br>
+            <br> 5. Put a scoop of ice cream on top
+            <br>
+            <br> 6. Drizzle some nuts or rice crispies on top of the ice cream.
+          </p>
+        </div> 
+      </div>
+    </div>
+{%endblock%}

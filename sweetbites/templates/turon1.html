@@ -1,0 +1,45 @@
+{%extends 'nave.html'%}
+{%block content%}
+{%load static%}
+    <script>
+      function mult(value) {
+        var x, y, a, b, c, d;
+        x= 1 * value;
+        y= (parseFloat(1 / 6) * value).toFixed(2);
+        a= (parseFloat(1.5 / 6 ) * value).toFixed(2);
+        b= 1 * value;
+        c= (parseFloat(2 / 6) * value).toFixed(2);
+
+
+        document.getElementById('outputX').value = x;
+        document.getElementById('outputY').value = y;
+        document.getElementById('outputA').value = a;
+        document.getElementById('outputB').value = b;
+        document.getElementById('outputC').value = c;
+      }
+    </script>
+      <div class="middle">
+        <div class="background_review">
+          <img src="{% static 'img/Turon1.webp' %}"
+             alt="Turon"
+             class="imageformat"/>
+
+          <p class="description">
+            <b class="product_name">Turon</b>
+            <label for="servings" class="serving_form">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; Yield Serving: </label>
+            <input type="number" name="Input" onkeyup="mult(this.value);" onclick="mult(this.value);" class="serving_design" value="6" min="1">
+            <br><br>
+            <a href="{% url 'turonn/' %}" class="link"><em> Description/ </em></a>
+            <a href="{% url 'turon2/' %}" class="link"><em> Direction to cook/ </em></a>
+            <br>
+            
+            <br><br> <input type="text" name="Output" id="outputX" class="serving_design" value="6" readonly> pieces bananas saba
+            <br><br> <input type="text" name="Output" id="outputY" class="serving_design" value="1"  readonly> cup jackfruit ripe
+            <br><br> <input type="text" name="Output" id="outputA" class="serving_design" value="1.5" readonly> cup brown vsugar
+            <br><br> <input type="text" name="Output" id="outputB" class="serving_design" value="6" readonly> pieces lumpia wrapper
+            <br><br> <input type="text" name="Output" id="outputC" class="serving_design" value="2" readonly> cups cooking oil
+          </p>
+        </div> 
+      </div>
+    </div>
+{%endblock%} 

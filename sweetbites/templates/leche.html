@@ -1,0 +1,30 @@
+{%extends 'nave.html'%}
+{%block content%}
+{%load static%}
+      <div class="middle">
+        <div class="background_review">
+          <img src="{% static 'img/Lecheflan1.webp' %}"
+             alt="Lecheflan"
+             class="imageformat"/>
+
+        <p class="description" style="font-size:17px;">
+            <b class="product_name">Leche flan</b>
+          <br>
+          <br>Prep: 10 mins<br>
+              Cook: 1hr 30 mins<br>
+              Total: 1 hr 50 mins<br>
+              Servings: 8<br>
+          <br> 
+            <a href="{% url 'lecheflann1/' %}" class="link"> <em> Ingredients/ </em> </a>
+            <a href="{% url 'lecheflann2/' %}" class="link"> <em> Direction to cook/ </em> </a>
+          <br>
+            
+          <br>Description:<br>
+          <br>
+              Leche Flan is a delicacy prepared with eggs and milk and topped with a soft caramel. It tastes like caramel custard and crème caramel. This delectable delicacy is well-known all around the world. Because of its flavor, ease of preparation, and extended shelf life, it has become a staple on most restaurant menus. It can also be used as a component in the construction of other delectable desserts.
+
+              In the Philippines, leche flan is the most popular dessert. It will not be complete without it on the dining table, especially during events such as parties and local fiestas.
+        </p>
+      </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,34 @@
+{%extends 'nave.html'%}
+{%block content%}
+{%load static%}
+
+      <div class="middle">
+        <div class="background_review">
+          <img src="{% static 'img/Pichi.webp' %}"
+             alt="Pichi-pichi"
+             class="imageformat"/>
+
+          <p class="description">
+            <b class="product_name">Pichi-pichi</b>
+            <br>
+            <br>Prep: 10 mins
+            <br>
+                Cook: 50 mins
+            <br>
+                Total: 1 hour
+            <br>
+                Servings: 24 pcs
+            <br>
+            <br> 
+              <a href="{% url 'pichi1/' %}" class="link"> <em>Ingredients/</em> </a>
+              <a href="{% url 'pichi2/' %}" class="link"> <em>Direction to cook/ </em> </a>
+            <br>
+            <br>Description:
+            <br>
+            <br>
+                Pichi-pichi, also known as kamoteng kahoy in Tagalog, is a popular Filipino delicacy consisting of coconut and shredded cassava. Once chilled, it has a gelatinous look and is sticky to the touch. It's made even better by the fact that it can be topped with niyog or grated coconut, or with salty, creamy cheddar cheese for that irresistible salty-sweet flavor combination.
+          </p>
+         </div> 
+      </div>
+    </div>
+{%endblock%}

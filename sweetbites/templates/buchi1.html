@@ -1,0 +1,54 @@
+{%extends 'nave.html'%}
+{%block content%}
+{%load static%}
+  <script>
+      function mult(value) {
+        var x, y, a, b, c, d;
+        x= (parseFloat(3.5 / 10) * value).toFixed(2);
+        y= (parseFloat(1 / 10) * value).toFixed(2);
+        a= (parseFloat(0.5 / 10) * value).toFixed(2);
+        b= (parseFloat(2 / 10) * value).toFixed(2);
+        c= (parseFloat(1 / 10) * value).toFixed(2);
+        d= (parseFloat(1 / 10) * value).toFixed(2);
+
+
+        document.getElementById('outputX').value = x;
+        document.getElementById('outputY').value = y;
+        document.getElementById('outputA').value = a;
+        document.getElementById('outputB').value = b;
+        document.getElementById('outputC').value = c;
+        document.getElementById('outputD').value = d;
+      }
+  </script>
+      <div class="middle">
+        <div class="background_review">
+          <img src="{% static 'img/Buchi.webp' %}"
+             alt="Buchi"
+             class="imageformat"/>
+
+          <p class="description">
+            <b class="product_name"> Buchi</b>
+            <label for="servings" class="serving_form"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Yield Serving: </label>
+            <input type="number" name="Input" onkeyup="mult(this.value);" onclick="mult(this.value);" class="serving_design" value="10" min="1">
+            <br>
+            <br>
+            <a href="{% url 'buchi/' %}" class="link"><em> Description/ </em></a>
+            <a href="{% url 'buchi2/' %}" class="link"><em> Direction to cook/ </em></a>
+            <br>
+            <br>
+            <br> <input type="text" name="Output" id="outputX" class="serving_design" value="3.5" readonly> ounces green mung beans
+            <br>
+            <br> <input type="text" name="Output" id="outputY" class="serving_design" value="1"  readonly> cup/s water
+            <br>
+            <br> <input type="text" name="Output" id="outputA" class="serving_design" value="0.5" readonly> cup/s white sugar
+            <br>
+            <br> <input type="text" name="Output" id="outputB" class="serving_design" value="2" readonly> cup/s glutinous rice flour
+            <br>
+            <br> <input type="text" name="Output" id="outputC" class="serving_design" value="1" readonly> tsp salt
+            <br>
+            <br> <input type="text" name="Output" id="outputD" class="serving_design" value="1" readonly> quart cooking oil
+          </p>
+        </div> 
+      </div>
+    </div>
+{%endblock%} 

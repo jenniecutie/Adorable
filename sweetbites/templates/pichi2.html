@@ -1,0 +1,30 @@
+{%extends 'nave.html'%}
+{%block content%}
+{%load static%}
+      <div class="middle">
+        <div class="background_review">
+           <img src="{% static 'img/Pichi.webp' %}"
+             alt="Pichi-pichi"
+             class="imageformat"/>
+
+          <p class="description">
+            <b class="product_name">Pichi-pichi</b>
+            <br>
+            <br> 
+            <a href="{% url 'pichii/' %}" class="link"> <em> Description/ </em> </a>
+            <a href="{% url 'pichi1/' %}" class="link"> <em> Ingredients/ </em> </a>
+            <br>
+            <br> 1. Bring water to a boil in the bottom of a steamer.
+            <br>
+            <br> 2. In a bowl, combine cassava, coconut juice, and sugar. Mix well until sugar is dissolved. Add lye water and mix well. Let stand for about 30 minutes to one hour.
+            <br>
+            <br> 3. Pour into individual molds and arrange molds in a steamer. Steam for about 40 to 50 minutes or until translucent and a toothpick inserted in the center comes out clean.
+            <br>
+            <br> 4. Remove from the steamer and refrigerate for about 20 to 30 minutes to completely cool and set.
+            <br>
+            <br> 5. Remove from molds and roll in coconut to fully coat. If preferred, roll half of the batch in shredded cheese for variety.
+          </p>
+        </div> 
+      </div>
+    </div>
+{%endblock%}

@@ -1,0 +1,70 @@
+{%extends 'nave.html'%}
+{%block content%}
+{%load static%}
+    <script type="text/javascript">
+      function text(x) {
+        if (x == 0) document.getElementById('reviewForm').style.display = "block";
+
+        else document.getElementById('reviewForm').style.display = "none";
+        return
+    }
+  </script>
+      <div class="middle">
+        <div class="background_review">
+          <img src="{% static 'img/Bayebaye.webp' %}"
+             alt="Baye-Baye"
+             class="imageformat"/>
+
+          <p class="description">
+            <b class="product_name">Baye-baye</b>
+            <br>
+            <br><b style="color: #DF4F80;">Rated: ★★/ 5</b>
+            <br>
+            <br> 
+            <a href="" class="link"> <em> Description/ </em> </a>
+            <a href="" class="link"> <em> Ingredients/ </em> </a>
+            <a href="" class="link"> <em> Direction to cook/ </em> </a>
+            <br>
+            <br>Baye-baye is known to be a perfect match for coffee or sodas. It is also well-loved by children because of its sweet consistent taste. It is a mixture of scraped young coconut meat,sugar and pinipig.
+            <br> Watch this for tutorial video:
+            <br><iframe width="210" height="120" src="https://www.youtube.com/embed/XEbp1_LPYos" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <b> <a href="Index.html" class="button_3">Back to Home </a></b>
+
+            <form name="myForm" id="suggest" method = "post" enctype="multipart/form-data" target="_blank">
+               <fieldset class="review_form6">
+                  <div class="review_form1_1">Would you like to review this product?<br/>
+                  <input class="review_form_1_2"type="radio" id="Yes" value="Yes" onclick="text(0)" name="choice" />
+
+                  <label class="review_form_1_3" for="Yes">Yes</label> 
+
+                  <input class="review_form_1_2" type="radio" id="No" value="No" onclick="text(1)" name="choice" /> 
+
+                  <label class="review_form_1_3"  for="No">No</label>
+                  </div>
+
+                  <div id="reviewForm" hidden>
+                    <div class="review_form7">
+                      <hr> Product Review</div>
+                  <div class="review_form1">Name: <br/>
+                  <input type="text" id="Name" name="Name" class="review_form2" required/>
+                  </div>
+
+                  <div class="review_form1" >Rate this product<br/>
+                  <select id="Rate" name="Rate" class="review_form2" required><option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  </select>
+                  </div>
+
+                  <div class="review_form1">Write a review!<br/>
+                  <textarea id="Review" name="Review"  rows="6" cols="30" class="review_form2" required></textarea>
+                  </div>
+                  <button class="paymentForm8" name="Submit" value="Submit" type="Submit"/> Submit</button>
+               </fieldset> 
+           </form>
+          </p>
+        </div>  
+      </div>
+{% endblock %}

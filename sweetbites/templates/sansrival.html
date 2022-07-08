@@ -1,0 +1,33 @@
+{%extends 'nave.html'%}
+{%block content%}
+{%load static%}
+      <div class="middle">
+        <div class="background_review">
+          <img src="{% static 'img/Sansrival.webp' %}"
+             alt="Sans rival"
+             class="imageformat"/>
+
+          <p class="description">
+            <b class="product_name">Sans rival</b>
+            <br>
+            <br>Prep: 2 hours
+            <br>
+                Cook: 45 mins
+            <br>
+                Total:  2 hour 45 mins
+            <br>
+                Servings: 1 tray
+            <br>
+            <br> 
+              <a href="{% url 'sansrival1/' %}" class="link"> <em>Ingredients/</em> </a>
+              <a href="{% url 'sansrival2/' %}" class="link"> <em>Direction to cook/ </em> </a>
+            <br>
+            <br>Description:
+            <br>
+            <br>
+                Sans Rival a very yummy layered dessert. Each layer is topped with a nice amount of icing like filling and cashews on top. This recipe is definitely for cashew lovers out there!
+          </p>
+         </div> 
+      </div>
+    </div>
+ {%endblock%} 

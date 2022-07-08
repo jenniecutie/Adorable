@@ -1,0 +1,53 @@
+{%extends 'nave.html'%}
+{%block content%}
+{%load static%}
+    <script>
+      function mult(value) {
+        var x, y, a, b, c, d;
+        x= 1 * value ;
+        y= (parseFloat(4 / 12) * value).toFixed(2);
+        a= (parseFloat(1 / 12) * value).toFixed(2);
+        b= (parseFloat(4 / 12) * value).toFixed(2);
+        c= (parseFloat(1 / 12) * value).toFixed(2);
+        d= (parseFloat(1 / 12) * value).toFixed(2);
+        e= (parseFloat(2 / 12) * value).toFixed(2);
+
+        document.getElementById('outputX').value = x;
+        document.getElementById('outputY').value = y;
+        document.getElementById('outputA').value = a;
+        document.getElementById('outputB').value = b;
+        document.getElementById('outputC').value = c;
+        document.getElementById('outputD').value = d;
+        document.getElementById('outputE').value = e;
+      }
+    </script>
+      <div class="middle">
+        <div class="background_review">
+          <img src="{% static 'img/Sansrival.webp' %}"
+             alt="Sans rival"
+             class="imageformat"/>
+
+          <p class="description" style="font-size: 18px;">
+            <b class="product_name">Sans rival</b>
+            <label for="servings" class="serving_form_2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Yield Serving: </label>
+            <input type="number" name="Input" onkeyup="mult(this.value);" onclick="mult(this.value);" class="serving_design" value="12" min="1">
+            <br>
+            <br>
+            <a href="{% url 'sansrival/' %}" class="link"> <em>Ingredients/</em> </a>
+              <a href="{% url 'sansrival2/' %}" class="link"> <em>Direction to cook/ </em> </a>
+            <br>
+            <br><br> <input type="text" name="Output" id="outputX" class="serving_design" value="12" readonly> eggs, separate
+            <input type="text" name="Output" id="outputY" class="serving_design" value="4"  readonly style="margin-left: 40px;"> cups white sugar
+
+            <br><br> <input type="text" name="Output" id="outputA" class="serving_design" value="1" readonly> tsp cream of tartar
+            <input type="text" name="Output" id="outputB" class="serving_design" value="4" readonly style="margin-left: 15px;"> cups chopped cashews
+
+            <br><br> <input type="text" name="Output" id="outputC" class="serving_design" value="1" readonly> cup butter, softened
+            <input type="text" name="Output" id="outputD" class="serving_design" value="1" readonly style="margin-left: 15px;">  cup water
+
+            <br><br> <input type="text" name="Output" id="outputE" class="serving_design" value="2" readonly> tbsp dark rum
+          </p>
+        </div>
+      </div>
+    </div>
+ {%endblock%} 

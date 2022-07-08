@@ -1,0 +1,35 @@
+{%extends 'nave.html'%}
+{%block content%}
+{%load static%}
+      <div class="middle">
+        <div class="background_review">
+          <img 
+              src="{% static 'img/Halo-halo1.webp' %}"
+             alt="Halo-halo"
+             class="imageformat"/>
+
+          <p class="description">
+            <b class="product_name">Halo-halo</b>
+            <br>
+            <br>Prep: 10 mins
+            <br>
+                Cook: 10 mins
+            <br>
+                Total: 20 mins
+            <br>
+                Servings: 1 cup
+            <br>
+            <br> 
+              <a href="{% url 'halohaloo1/' %}" class="link"> <em>Ingredients/</em> </a>
+              <a href="{% url 'halohaloo2/' %}" class="link"> <em>Direction to cook/ </em> </a>
+            <br>
+              
+            <br>Description:
+            <br>
+            <br>
+                Halo-halo, the classic Filipino summer delight, is a certain way to cool down. Shaved ice is combined with various layers of sweet beans, fruits, and other goodies, which are then drizzled with milk. Not to mention the toppings, which include leche flan, ube halaya, and even ube ice cream!
+          </p>
+         </div> 
+      </div>
+    </div>
+{%endblock%} 

@@ -1,0 +1,65 @@
+{%extends 'nave.html'%}
+{%load static%}
+{%block content%}
+<div>
+    <div>
+        <br>
+        <br>
+        <fieldset style="border: solid;
+                        border-color: #DF4F80;
+                        border-width: 3px;
+                        padding-left: 80px;
+                        width: 1080px;
+                        color: #DF4F80;
+                        font-size: 15px;
+                        text-align: left;
+                        margin-left: 90px;
+                        background-color: white;">
+            <legend> <b style="font-size: 20px;"> Your Personal Information</b> </legend>
+            <label>Full Name: {{person.fullName}}</label> <br>
+            <label>Mobile No.: {{person.mobileNo}}</label><br>
+            <label>Email Add: {{person.emailAdd}}</label><br>
+            <label>Address: {{person.streetAdd}}</label>
+
+        </fieldset>
+        <table id="tableSubmittedRecipe" style="width: fit-content; margin-left:120px;"> 
+                <tr>
+                    <th>No.</th>
+                    <th>Dessert Name </th>
+                    <th>Description</th>
+                    <th>Prep. Time</th>
+                    <th>Cook Time</th>
+                    <th>Yield Serving</th>
+                    <th>Ingredients</th>
+                    <th>Direction to Cook</th>
+                    <th>Function</th>
+                </tr>
+                {% for item in desserts %}
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td>{{item.recipe.dName}}</td>
+                    <td>{{item.recipe.dDescription}}</td>
+                    <td>{{item.recipe.dPrepTime}}</td>
+                    <td>{{item.recipe.dCookTime}}</td>
+                    <td>{{item.recipe.dYieldServing}}</td>
+                    <td>{{item.ingredients.ingredientsName}}</td>
+                    <td>{{item.direction.direction}}</td>
+                    <td>
+                        <button><a href="/ " style="text-decoration: none; color: white;">Update</a></button>
+                        <button><a style="text-decoration: none; color: white;" href="/delete/{{person.id}}/{{item.id}}">Delete</a></button>
+                    </td>
+                </tr>
+                {% endfor %}
+              </table>
+              <form method="POST" style="margin-left: 90px">
+                {% csrf_token%}
+                 <br>
+                 <br>
+                 <button type="submit"> Add Recipe Again</button>
+                 <br>
+                 <br>
+                 <button><a href="/index/" style="text-decoration: none; color: white;">New User</a>  </button>
+              </form>   
+    </div>
+</div>
+{% endblock %}

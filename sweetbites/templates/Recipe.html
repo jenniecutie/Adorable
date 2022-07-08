@@ -1,0 +1,49 @@
+{%extends 'nave.html'%}
+{%block content%}
+{%load static%}
+      <div class="middle">
+        <div class="title_background"> <b class="title_text"> </b> </div>
+        <center>
+          <div class="title_background1"> <b class="title_text"> List of Dessert in the Philippines </b> </div>
+
+          <abbr title="Buchi"><a href="{% url 'buchi/' %}"><img class="imageformats" src= "{% static 'img/Buchi.webp' %}"></a></abbr>
+
+          <abbr title="Bibingka"><a href="{% url 'bibingkaa/' %}"><img class="imageformats" src= "{% static 'img/Bibingka.webp' %}"></a></abbr>
+
+          <abbr title="Sans Rival"><a href="{% url 'sansrival/' %}"><img class="imageformats" src= "{% static 'img/Sansrival.webp' %}"></a></abbr>
+
+          <abbr title="Pichi-Pichi"><a href="{% url 'pichii/' %}"><img class="imageformats" src= "{% static 'img/Pichi.webp' %}"></a></abbr>
+
+          <abbr title="Puto"><a href="{% url 'putoo/' %}"><img class="imageformats" src= "{% static 'img/Puto.webp' %}"></a></abbr>
+
+          <div>
+           <b> <a href="#" class="image_name"> Buchi ★★</a> </b>
+           <b> <a href="#"class="image_name1"> Bibingka ★★★</a></b>
+           <b> <a href="#"class="image_name2"> Sans Rival ★★★</a></b>
+           <b> <a href="#"class="image_name3"> Pichi-pichi ★★★</a></b>
+           <b> <a href="#"class="image_name4"> Puto ★★★</a></b>
+          </div>
+        </center>
+
+         <center>
+          <abbr title="Taho"><a href="{% url 'tahoo/' %}"><img class="imageformats" src= "{% static 'img/Taho.webp' %}"></a></abbr>
+
+          <abbr title="Turon"><a href="{% url 'turonn/' %}"><img class="imageformats" src= "{% static 'img/Turon1.webp' %}"></a></abbr>
+
+          <abbr title="Banana Cue"><a href="{% url 'bananacuee/' %}"><img class="imageformats" src= "{% static 'img/Bananacue.webp' %}"></a></abbr>
+
+          <abbr title="Halo-halo"><a href="{% url 'halohaloo/' %}"><img class="imageformats" src= "{% static 'img/Halo-halo1.webp' %}"></a></abbr>
+          
+          <abbr title="Leche Flan"><a href="{% url 'lecheflann/' %}"><img class="imageformats" src= "{% static 'img/Lecheflan1.webp' %}"></a></abbr>
+
+          <div>
+           <b> <a href="#" class="image_name5"> Taho ★★</a> </b>
+           <b> <a href="#"class="image_name6" > Turon ★★★</a></b>
+           <b> <a href="#"class="image_name7" >Banana Cue ★★★</a></b>
+           <b> <a href="#"class="image_name8">Halo-halo ★★★</a></b>
+           <b> <a href="#"class="image_name9">Leche Flan ★★★★★</a></b>
+        </div>
+        </center>
+      </div>   
+    </div>
+{%endblock%} 

@@ -1,0 +1,44 @@
+{%extends 'nave.html'%}
+{%block content%}
+{%load static%}
+      <div class="middle">
+        <div class="background_review">
+          <img 
+             src="{% static 'img/Recipe_Image.png' %}"
+             alt="Buchi"
+             class="imageformat"/>
+
+          <p class="description">
+            <b class="product_name">Share Your Recipe!</b>
+            <br>
+            <br> Welcome to the biggest recipe swap around! Use this form to share a recipe with Sweetbites. Our editors want to share your recipes and your special family traditions, stories and photos. Your recipe will also have a chance to be published in our website. So share you recipe now! We love to see what you’re cooking and baking!
+           <br>
+          <form name="myForm" id="suggest" method="POST">
+          {% csrf_token %}
+            <fieldset style="border-color: #DF4F80; border-width: 3px; width: 300px;">
+              <div 
+                  class="review_form" 
+                  style="font-size: 30px;"> <br> Ingredients </div>
+                  <div id="forms">
+                     <br>
+                      <input 
+                           type="text"
+                           id="description"
+                           Name="form[]"
+                           class="inputformat5" 
+                           placeholder="Type all the ingredients needed " 
+                           required/>
+                  </div>
+                  <br>
+                  <br>
+                  <button
+                      class="paymentForm10" 
+                      name="submit"
+                      type="submit"/> Submit
+                </button>
+           </fieldset>
+          </form> 
+          </p>
+        </div>  
+      </div>
+{%endblock%}

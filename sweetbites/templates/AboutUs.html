@@ -1,0 +1,40 @@
+{%extends 'nave.html'%}
+{%block content%}
+{%load static%}
+        <b class="description1"><br> Have questions? We'd love to hear from you. Here's how you can reach us.</b> 
+        
+        <center> 
+         <a href="mailto:jennifer.adorable@gsfe.tupcavite.edu.ph"
+            target="_blank"> 
+         <img src="{% static 'img/Mail.webp'%}"
+              alt="E-mail"
+              class="imageformat1">
+         </a>
+
+         <a href="https://www.facebook.com/jennie.adorable/"
+            target="_blank">
+         <img src="{% static 'img/Facebook.webp'%}"
+              alt="Facebook"
+              class="imageformat1">
+         </a>
+
+         <a href="https://www.instagram.com/"
+            target="_blank">
+         <img src="{% static 'img/Instagram.webp'%}"
+            alt="Instagram"
+            class="imageformat1">
+         </a>
+
+         <a href="https://twitter.com/"
+            target="_blank">
+         <img src="{% static 'img/Twitter.webp'%}"
+            alt="Twitter"
+            class="imageformat1">
+         </a>
+        </center>  
+
+        <img src="{% static 'img/Contact.webp'%}"
+             alt="Contact"
+             class="imageformat11">
+
+{% endblock %}

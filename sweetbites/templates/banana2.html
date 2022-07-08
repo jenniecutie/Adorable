@@ -1,0 +1,33 @@
+{%extends 'nave.html'%}
+{%block content%}
+{%load static%}
+      <div class="middle">
+        <div class="background_review">
+          <img src="{% static 'img/Bananacue.webp' %}"
+             alt="Bananacue"
+             class="imageformat"/>
+
+          <p class="description" style="font-size:17px;">
+            <b class="product_name">Banana Cue</b>
+            <br>
+            <br> 
+            <a href="{% url 'bananacuee/' %}" class="link"><em> Description/ </em></a>
+            <a href="{% url 'bananacuee1/' %}" class="link"> <em> Ingredients/ </em> </a>
+
+            <br>
+            <br>
+            
+            <br> 1. Heat a cooking pot then pour-in cooking oil.<br>
+
+            <br> 2. When the oil becomes hot, deep fry the bananas for 2 minutes. <br>
+
+            <br> 3. Gradually put-in the brown sugar, adjust the heat to medium-low and continue cooking until the melted brown sugar coats the bananas. Note: Gently stir the bananas so that it can get coated with melted brown sugar easily.<br>
+
+            <br> 4. Remove the cooked bananas one by one and immediately skewer using a bamboo skewer.<br>
+
+            <br> 5. Let cool then serve with cold soda.Share and enjoy!
+          </p>
+        </div>  
+      </div>
+    </div>
+{%endblock%} 

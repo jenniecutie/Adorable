@@ -1,0 +1,36 @@
+{%extends 'nave.html'%}
+{%block content%}
+{%load static%}
+      <div class="middle">
+        <div class="background_review">
+          <img src="{% static 'img/Turon1.webp' %}"
+             alt="Turon"
+             class="imageformat"/>
+
+          <p class="description">
+            <b class="product_name">Turon</b>
+            <br>
+            <br>Prep: 10 mins
+            <br>
+                Cook: 12 mins
+            <br>
+                Total: 22 mins
+            <br>
+                Servings: 6
+            <br>
+            <br> 
+              <a href="{% url 'turon1/' %}" class="link"> <em>Ingredients/</em> </a>
+              <a href="{% url 'turon2/' %}" class="link"> <em>Direction to cook/ </em> </a>
+            <br>
+              
+            <br>Description:
+            <br>
+            <br>
+                Turon refers to a Filipino snack. It's also known as banana lumpia or deep-fried banana buns. Turon, a traditional Filipino meryenda and dessert, has grown in popularity over time.
+
+                This sweet food is frequently seen being sold on the streets alongside bananacue or even vegetarian lumpia. It's simple to make and the materials are cheap.
+          </p>
+         </div> 
+      </div>
+    </div>
+{%endblock%} 

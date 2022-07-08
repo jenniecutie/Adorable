@@ -1,0 +1,59 @@
+{%extends 'nave.html'%}
+{%block content%}
+{%load static%}
+<script type="text/javascript">
+  function mult(value) {
+        var x, y, a, b, c, d;
+        x= (parseFloat(3.5 / 10) * value).toFixed(2);
+        y= (parseFloat(1 / 10) * value).toFixed(2);
+        a= (parseFloat(0.5 / 10) * value).toFixed(2);
+        b= (parseFloat(2 / 10) * value).toFixed(2);
+        c= (parseFloat(1 / 10) * value).toFixed(2);
+        d= (parseFloat(1 / 10) * value).toFixed(2);
+        e= (parseFloat(2 / 10) * value).toFixed(2);
+        f= (parseFloat(1 / 10) * value).toFixed(2);
+        g= (parseFloat(1 / 10) * value).toFixed(2);
+
+        document.getElementById('outputX').value = x;
+        document.getElementById('outputY').value = y;
+        document.getElementById('outputA').value = a;
+        document.getElementById('outputB').value = b;
+        document.getElementById('outputC').value = c;
+        document.getElementById('outputD').value = d;
+        document.getElementById('outputE').value = e;
+        document.getElementById('outputF').value = f;
+        document.getElementById('outputG').value = g;
+      }
+</script>
+      <div class="middle">
+        <div class="background_review">
+          <img src="{% static 'img/Pichi.webp' %}"
+             alt="Pichi-pichi"
+             class="imageformat"/>
+
+          <p class="description" style="font-size:18px;">
+            <b class="product_name">Pichi-pichi</b>
+            <label for="servings" class="serving_form_2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;Yield Serving: </label>
+            <input type="number" name="Input" onkeyup="mult(this.value);" onclick="mult(this.value);" class="serving_design" value="24" min="1">
+            <br>
+            <a href="{% url 'pichii/' %}" class="link"><em> Description/ </em></a>
+            <a href="{% url 'pichi2/' %}" class="link"><em> Direction to cook/ </em></a>
+            <br>
+            <br><br> <input type="text" name="Output" id="outputX" class="serving_design" value="250" readonly> g of grated cassava
+            <input type="text" name="Output" id="outputY" class="serving_design" value="2"  readonly style="margin-left: 20px;"> cup coconut juice
+
+            <br><br> <input type="text" name="Output" id="outputA" class="serving_design" value="1" readonly> cup sugar
+            <input type="text" name="Output" id="outputB" class="serving_design" value="0.25" readonly style="margin-left: 122px;"> tsp salt
+
+           <br> <br> <input type="text" name="Output" id="outputC" class="serving_design" value="1" readonly> tsp lye water
+            <input type="text" name="Output" id="outputD" class="serving_design" value="1" readonly style="margin-left: 92px;"> tsp Ube Food Coloring
+
+            <br><br> <input type="text" name="Output" id="outputE" class="serving_design" value="1" readonly> tsp Pandan Extract
+            <input type="text" name="Output" id="outputF" class="serving_design" value="2" readonly style="margin-left: 10px;"> cups grated mature coconut
+
+            <br><br> <input type="text" name="Output" id="outputG" class="serving_design" value="100" readonly> grams cheese
+          </p>
+        </div> 
+      </div>
+    </div>
+{%endblock%}

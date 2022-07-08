@@ -1,0 +1,35 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    <link rel="stylesheet" href="{%static 'css/styles.css'%}">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SweetBites</title>
+    <link rel="icon" href="{% static 'img/Logo.webp'%}" type="image/icon type">
+  </head>
+<body>
+    <div class="grid-containers">
+      <div class="header">
+         <img
+            src="{% static 'img/Logo.webp'%}"
+            alt="SweetBites"
+            class= image_format> 
+          <br>
+          <br>
+          <a href="{% url 'mainpage' %}" class="header_text"> Home </a>
+          <a href="{% url 'recipe/' %}" class="header_text"> Recipe </a>
+          <a href="{% url 'index' %}" class="header_text"> Add Recipe </a>
+          <a href="{% url 'aboutUs/' %}" class="header_text"> About Us </a>
+      </div>
+
+      <div class="divider">
+        divider
+      </div>  
+        {%block content%}
+
+        {% endblock %}
+    </div>
+</body>
+</html>

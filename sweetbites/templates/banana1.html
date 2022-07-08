@@ -1,0 +1,38 @@
+{%extends 'nave.html'%}
+{%block content%}
+{%load static%}
+    <script>
+      function mult(value) {
+        var x, y, a, b, c, d;
+        x= (parseFloat(2 / 3) * value).toFixed(2);
+        y= (parseFloat(9 / 3) * value).toFixed();
+        a= (parseFloat(4 / 3) * value).toFixed(2);
+
+        document.getElementById('outputX').value = x;
+        document.getElementById('outputY').value = y;
+        document.getElementById('outputA').value = a;
+      }
+    </script>
+      <div class="middle">
+        <div class="background_review">
+          <img src="{% static 'img/Bananacue.webp' %}"
+             alt="Bananacue"
+             class="imageformat"/>
+
+          <p class="description">
+            <b class="product_name">Banana Cue</b>
+            <label for="servings" class="serving_form">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Yield Serving: </label>
+            <input type="number" name="Input" onkeyup="mult(this.value);" onclick="mult(this.value);" class="serving_design" value="3" min="1"> 
+            <br>
+            <br>
+            <a href="{% url 'bananacuee/' %}" class="link"><em> Description/ </em></a>
+            <a href="{% url 'bananacuee2/' %}" class="link"> <em> Direction to cook/ </em> </a>
+            <br>
+            <br><br> <input type="text" name="Output" id="outputX" class="serving_design" value="2" readonly> cup/s brown sugar
+            <br><br> <input type="text" name="Output" id="outputY" class="serving_design" value="9"  readonly> pieces saging na saba
+            <br><br> <input type="text" name="Output" id="outputA" class="serving_design" value="4" readonly> cup/s cooking oil
+          </p>
+        </div> 
+      </div>
+    </div>
+{%endblock%} 

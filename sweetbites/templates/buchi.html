@@ -1,0 +1,34 @@
+{%extends 'nave.html'%}
+{%block content%}
+{%load static%}
+
+    <div class="middle">
+        <div class="background_review">
+          <img 
+             src="{% static 'img/Buchi.webp' %}"
+             alt="Buchi"
+             class="imageformat"/>
+          <p class="description">
+            <b class="product_name">Buchi</b>
+            <br>
+            <br>Prep: 30 mins
+            <br>
+                Cook: 40 mins
+            <br>
+                Total: 1 hr 10 mins
+            <br>
+                Servings: 10
+            <br>
+            <br> 
+              <a href="{% url 'buchi1/' %}" class="link"> <em>Ingredients/</em> </a>
+              <a href="{% url 'buchi2/' %}" class="link"> <em>Direction to cook/ </em> </a>
+            <br>
+              
+            <br>Description:
+            <br>
+            <br>
+                Buchi is a Filipino and Chinese delicacy made with a variety of sweetened contents such as red beans, mung beans "mongo," or purple yam, or cheese which are wonderfully wrapped in glutinous rice flour and deep fried.
+          </p>
+         </div> 
+      </div>
+{%endblock%} 

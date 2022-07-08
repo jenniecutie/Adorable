@@ -1,0 +1,26 @@
+{%extends 'nave.html'%}
+{%block content%}
+{%load static%}
+      <div class="middle">
+        <div class="background_review">
+           <img src="{% static 'img/Puto.webp' %}"
+             alt="Puto"
+             class="imageformat"/>
+
+          <p class="description">
+            <b class="product_name">Puto</b>
+            <br>
+            <br> 
+            <a href="{% url 'putoo/' %}" class="link"> <em> Description/ </em> </a>
+            <a href="{% url 'puto1/' %}" class="link"> <em> Ingredients/ </em> </a>
+            <br>
+            <br> 1. Grease small cakes, puto molds, or ramekins for use in a steamer. Mix the flour, sugar, and baking powder together in a bowl. In a separate, large bowl, scramble the eggs with the evaporated milk and water. Fold the dry mixture into the eggs until evenly blended. Fill the prepared molds 2/3 of the way up with the batter and top with shredded cheese.
+            <br>
+            <br> 2. Fill a wok or a saucepan that will hold a steamer basket with a few inches of water. Bring the water to a boil over medium-high heat. Place the molds into a steamer basket and place over the boiling water and cover.
+            <br>
+            <br> 3. Steam until a toothpick inserted in the center of one of the putos comes out clean, about 30 minutes. Cool on a wire rack and serve warm or at room temperature.
+          </p>
+        </div> 
+      </div>
+    </div>
+{%endblock%}
